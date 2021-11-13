@@ -1,13 +1,16 @@
 
 console.log("*************** 1 **************");
 function alwaysHungry(arr) {
+    let tally = 0;
     for( let i = 0; i < arr.length; i++){
         if(arr[i]=="food"){
             console.log("yummy");
-        }else{
-            console.log("I'm hungry");
+            tally++;
         }
     } 
+    if (tally == 0){
+        console.log("I'm hungry")
+    }
 }
    
 alwaysHungry([3.14, "food", "pie", true, "food"]);
@@ -33,7 +36,6 @@ function betterThanAverage(arr) {
     var sum = 0;
     for(let i = 0; i < arr.length; i++){
         sum += arr[i];
-        
     }
     let averageNumber = sum / arr.length;
     var count = 0;
@@ -73,7 +75,6 @@ function fibonacciArray(n) {
     }
     return fibArr;
 }
-   
 var result = fibonacciArray(10);
 console.log(result); // we expect back [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
